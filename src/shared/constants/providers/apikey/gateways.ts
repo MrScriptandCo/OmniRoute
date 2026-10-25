@@ -933,6 +933,10 @@ export const APIKEY_PROVIDERS_GATEWAYS = {
     textIcon: "VAI",
     passthroughModels: true,
     website: "https://vercel.com/docs/ai-gateway",
+    hasFree: true,
+    // Source: vercel.com/docs/ai-gateway/pricing and /faq (both read 2026-10-25).
+    freeNote:
+      "Monthly free credit (not a trial) for a subset of models, with lower rate limits; needs a payment method on file. Buying credits ends the free tier.",
   },
   llm7: {
     id: "llm7",

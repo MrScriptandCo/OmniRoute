@@ -20,3 +20,11 @@ test("cerebras freeNote reflects the $5 card-gated signup credit (#11773)", () =
   assert.match(n, /payment method|credit card/i);
   assert.equal(/1M tokens\/day|30K TPM/.test(n), false);
 });
+
+test("vercel-ai-gateway is marked free and its freeNote describes the monthly free credit", () => {
+  assert.equal(getProviderById("vercel-ai-gateway")?.hasFree, true);
+  const n = note("vercel-ai-gateway");
+  assert.match(n, /monthly free credit/i);
+  assert.match(n, /subset of models/i);
+  assert.match(n, /payment method/i);
+});
